@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel= "stylesheet" type="text/css" href = "stylesheet.css">
+	
+   
+<title>Temp Calc</title>
+	<script type="text/javascript">
+    function EnableDisableTextBox() {
+        var chkFTC = document.getElementById("chkFTC");
+        var fahrenheitToCelsius = document.getElementById("fahrenheitToCelsius");
+		
+		var chkCTF = document.getElementById("chkCTF");
+		var celsiusToFarenheit = document.getElementById("celsiusToFahrenheit");
+		
+        fahrenheitToCelsius.disabled = chkFTC.checked ? false : true;
+        if (!fahrenheitToCelsius.disabled) {
+            fahrenheitToCelsius.focus();
+        }
+		
+		celsiusToFahrenheit.disabled = chkCTF.checked ? false : true;
+        if (!celsiusToFahrenheit.disabled) {
+            celsiusToFahrenheit.focus();
+        }
+	}
+		
+		function myCalculation(){
+			
+  		var CelsiusTempEntered = document.getElementById("celsiusToFahrenheit").value;
+			
+		var CelsiusConvToFar = CelsiusTempEntered/5 * 9 + 32;
+			
+		celsiusToFahrenheit.disabled = chkCTF.checked ? false : true;
+        if (!celsiusToFahrenheit.disabled) {
+		document.getElementById("display").innerHTML = CelsiusConvToFar.toFixed(2) + " degrees fahrenheit";}
+		
+		var FarTempEntered =document.getElementById("fahrenheitToCelsius").value;
+		
+		var FarTempCovToCel = ((FarTempEntered-32) *5) /9;
+		
+		fahrenheitToCelsius.disabled = chkFTC.checked ? false : true;
+        if (!fahrenheitToCelsius.disabled) {
+		document.getElementById("display").innerHTML = FarTempCovToCel.toFixed(2) + " degrees celsius";}
+	
+		
+		}
+		
+    
+</script>
+</head>
+
+<body>
+	<div id="title"> Temperature Convertor</div><br>
+<span>Fahrenheit to Celsius</span>
+<label for="chkFTC">
+    <input type="radio" id="chkFTC" name="checkIfClicked" onclick="EnableDisableTextBox()" />
+</label>
+	<br>
+	<span>Celsius To Fahrenheit</span>
+<label for="chkFTC">
+    <input type="radio" id="chkCTF" name="checkIfClicked" onclick="EnableDisableTextBox()" />
+<hr />
+Fahrenheit to Celsius:
+<input type="text" id="fahrenheitToCelsius" disabled="disabled" />
+	
+	
+</label>
+<hr />
+Celsius To Fahrenheit:
+<input type="text" id="celsiusToFahrenheit" disabled="disabled" />
+	
+	<div class="button">
+    <button onclick="myCalculation()">Calculate</button>
+  </div>
+	<p id="display"> Zachary Perry &copy;2021 </p>
+</body>
+</html>

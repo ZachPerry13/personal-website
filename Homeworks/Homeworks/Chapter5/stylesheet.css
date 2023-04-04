@@ -1,0 +1,62 @@
+
+html{
+    background-image: url(bats.gif);
+    background-repeat: repeat;
+    font-family: sans-serif;
+    
+}
+
+meat{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+body {
+width: 800px;
+margin: auto;
+box-shadow: -10px 10px 10px 10px black;
+background: white;
+padding: 5px;
+}
+   
+header{
+    font-weight: bold;
+    font-size: 20px;
+    background-image: linear-gradient(to right,white, orange, black);
+    height: 80px;
+    border-bottom: solid black;
+    text-indent: 30px;
+}
+
+footer{
+    text-align: center;
+    font-size: 30;
+    background-image: linear-gradient(to right,black, orange, white);
+    height: 30px;
+    border-top: solid black;
+}
+
+h1{
+    font-size: 16px;
+}
+
+h1::first-letter {
+  font-size: 200%;
+}
+    
+
+ul{
+    line-height: 150%;
+}
+a{
+    color: orange;
+}
+a:link{
+    color: orange;
+}
+a:visted{
+    color: orange;
+}
+a:hover{
+    color: green;
+}

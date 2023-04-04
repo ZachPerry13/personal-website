@@ -1,0 +1,295 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+html {
+	background-image: url("bats.gif");	
+}
+body  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 800px;
+	background-color: white;
+	margin: 0 auto; 
+	padding: 0;
+	border: 3px solid black;
+	box-shadow: 0 9px 18px 9px;
+}
+h1, h2, p {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: none;
+}
+
+/* Header */
+header { 
+	background: orange;
+    background-image: -moz-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+} 
+hgroup {
+	padding-top: 15px;
+}
+header img { 
+	float: left; 
+	padding: 15px;  
+} 
+header h1 {
+	font-size: 250%;
+}
+header h2 {
+	font-size: 125%;
+	padding-bottom: 15px;
+}
+
+/* Navigation bar */
+nav {
+	margin: 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: .25em 0;
+    text-align: center;
+    border-top: 1px solid black;
+    /border-bottom: 1px solid black; 
+}
+nav li {
+    display: inline;
+    padding: 0 .9em 0 .5em;
+    border-right: 2px solid black;
+}
+nav a {
+    font-weight: bold;
+    color: black;
+}
+nav a.current { 
+	text-decoration: none;
+}
+nav a:link, nav a:visited { 
+    color: black; 
+}
+nav a:hover, nav a:focus { 
+    color: green;
+	text-decoration: underline;
+}
+
+/* Sidebar */
+aside {
+	float: left; 
+	width: 175px;
+	padding: 20px 0; 
+}
+aside ul { 
+    list-style: none;
+}
+aside li { 
+    margin-bottom: .5em; 
+	margin-right: 2em;
+	border: 2px solid black;
+	background-color: orange;
+}       
+aside li a {
+    display: block;
+    padding: .5em 0 .5em .5em;
+    text-decoration: none;
+    font-weight: bold;
+	font-size: 85%;
+	color: black;
+}    
+
+/* Section */
+section {
+	width: 560px;
+	padding: 20px 60px 30px 0; 
+	float: right;
+}
+section h1 { 
+	font-size: 150%;
+	margin-bottom: .5em;
+}
+section h1:first-letter { 
+	font-size: 250%;
+}
+section h2 {
+	font-size: 125%;
+	margin: .8em 0 .5em 0;
+}
+section p {
+	margin-bottom: .5em;
+}
+section img {
+	border: none;
+}
+section a {
+	font-weight: bold;
+	color: orange;
+}
+section a:link, section a:visited { 
+    color: orange; 
+}
+section a:hover, section a:focus { 
+    color: green;
+}
+
+/* Footer */
+footer { 
+	clear: both;
+	border-top: 2px solid black;
+	padding: 15px;
+	background: orange;
+	background-image: -moz-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+} 
+footer p {
+	font-size: 90%;
+	text-align: center;
+}
+
+
+
+
+
+#menu {
+    background: black;
+}
+
+#menu ul {
+    list-style: none;
+    position: relative;
+}
+
+#menu li { 
+    float: left;
+    display: inline;
+    padding: 0;
+    width: 15%;
+}
+
+#menu a {
+    text-align: center;
+    display: block;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    text-decoration: none;
+    background-color: black;
+    color: white; 
+    font-weight: 100;
+}
+
+
+#menu ul li a.current {
+    color: orange; 
+}
+
+#menu ul li a:hover, #menu ul li a:focus {
+    background-color: gray;
+}
+
+#menu ul ul {	
+	float: left;
+	display: none;
+	position: absolute;
+    width: inherit; 
+}
+
+#menu ul ul li {
+    clear:both;
+    width: 100%;
+}
+
+#menu ul li:hover ul { display: block; }
+
+#menu ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+nav#menu ul li ul a {
+	color:white;
+	margin:0;}
+
+
+nav.slicknav_nav ul li a {
+	color:white;
+	text-align:left;
+	margin:0;
+}
+
+.slicknav_menu {
+	display:none;
+}
+
+
+
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 800px){
+body {
+	box-shadow: none;
+}
+html {
+    background-image: none;     
+}
+
+* {
+	font-size:90%
+}
+header img {
+    max-height: auto; 
+    min-width: 40px;
+    max-width: 10%;
+}
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+#menu {
+	display: none;
+}
+.slicknav_menu {
+	display: block;
+}
+section {
+    float: none;
+    clear: both; 
+    margin: auto;
+}
+aside {
+	float: none;
+    clear: both;
+    margin: auto;
+	text-align: center;
+}
+section img{
+	min-width: 40px;
+}
+}
+
+@media screen and (max-width: 479px) {
+header h1 {
+	font-size: 200%;  
+	font-weight: 700; 
+	padding-left: .5em; 
+}
+header h2 {
+	font-size: 115%; 
+	padding-left: .5em;
+}
+section h1 {
+	font-size: 100%;
+}
+
+.slicknav_menu {
+	display: block;
+}
+
+}
+

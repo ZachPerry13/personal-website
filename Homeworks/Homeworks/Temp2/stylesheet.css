@@ -1,0 +1,15 @@
+body {
+ 	
+position: fixed;
+	right: 40%;
+	top: 30%;
+    border: 3px solid blue;
+    box-shadow: 10px black ;
+    padding: 20px;
+}
+
+#title{
+	font-size: 130%;
+	text-align: center;
+	color: blue;
+}

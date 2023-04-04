@@ -1,0 +1,142 @@
+
+html{
+    background-image: url(bats.gif);
+    background-repeat: repeat;
+    font-family: sans-serif;
+    margin: auto;
+    
+}
+meat{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+body {
+width: 800px;
+box-shadow: -10px 10px 10px 10px black;
+background: white;
+margin: auto;
+}
+
+sidebar {
+  float: left;                
+  width: 200px;
+  height: 580px;
+  color: white;
+}
+
+
+header{
+    font-weight: bold;
+    font-size: 20px;
+    background-image: linear-gradient(to right,white, orange, black);
+    height: 80px;
+    border-bottom: solid black;
+    text-indent: 30px;
+}
+
+footer{
+    text-align: center;
+    font-size: 20px;
+    background-image: linear-gradient(to right,black, orange, white);
+    border-top: solid black;
+    padding: 5px;
+}
+
+ul{
+list-style-type: none;  
+}
+
+
+
+#sidebar .menu{
+font-size: 30px; 
+color: black; 
+padding: 5px;
+border: 10px;
+border-color: coral;
+margin: auto;
+text-align: center;
+}
+
+#sidebar li.sub{
+background-color: orange;
+
+}
+
+
+
+
+
+
+
+
+
+/*hide the sub-menu's*/
+#Top li.sub ul {
+    display: none;
+
+} 
+
+#Top .menu{
+background-color: black;
+height: 30px;
+margin: auto;
+text-align: center;
+
+}
+
+/*horizontally*/
+#Top .menu > li {
+    display:none; 
+    margin: auto;
+    padding-bottom: 50px;
+    padding-right: 40px; 
+     
+}
+
+
+/* bring sub back on hover, but without disrupting the list*/
+#Top li.sub {
+    position:relative;
+    display: inline;
+    margin: auto;
+    font-size: 20px;
+	color: white;
+   
+}
+
+#Top li.sub:hover > ul { 
+    display: block;
+    position: absolute;
+    left: 0em;
+    margin: 0;
+    background:black;
+    width:100px;
+    text-decoration: none;
+}
+h1::first-letter {
+  font-size: 200%;
+}
+ul{
+    line-height: 150%;
+    color: black;
+        
+}
+
+a{
+    color: Black;
+    font-size: 20px;	
+}
+a:link{
+    color: white;
+}
+a:visted{
+    color: orange;
+}
+a:hover{
+    color: green;
+}
+/*hide the sub-menu's*/
+li.sub ul {
+    display: none;
+} 
